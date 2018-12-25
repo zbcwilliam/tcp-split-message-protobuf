@@ -9,11 +9,8 @@ reference: http://www.ideawu.net/blog/archives/1027.html
 pseudocode：
 
 char tmp[];
-
 Buffer buffer;
-
 // 网络循环：必须在一个循环中读取网络，因为网络数据是源源不断的。
-
 while(1){
 
     // 从TCP流中读取不定长度的一段流数据，不能保证读到的数据是你期望的长度
