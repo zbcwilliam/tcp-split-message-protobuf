@@ -1,0 +1,16 @@
+//Test.proto
+syntax = "proto2";
+package testprotobuf ;//包名:在生成对应的C++文件时，将被替换为名称空间，在代码中会有体现
+option optimize_for = SPEED ;//文件级别的选项,Protobuf优化级别
+//心跳信息数据结构
+message HeartInfo
+{
+  optional int32 curtime = 1;
+  optional string hostip = 2;
+  message MapStmsiEntry {
+    optional int32 stmsi = 1[default = 0];
+    optional int32 times = 2[default = 0];
+  }
+  repeated MapStmsiEntry mapstmsi  = 3;
+  optional int32 testelement = 4;
+} 
